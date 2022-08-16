@@ -10,19 +10,19 @@ const Roadmap = () => {
             <div className='roadmap-ul'>
                 <div className='roadmap-item'>
                     <div className='item-name'>
-                    <div style={{backgroundColor:'#F49F85'}} className='round'></div> <a>Planned</a> 
+                    <div style={{backgroundColor:'#F49F85'}} className='round'></div> <a href="/">Planned</a> 
                     </div>
                     <span>2</span>
                 </div>
                 <div className='roadmap-item'>
                     <div className='item-name'>
-                    <div style={{backgroundColor:'#AD1FEA'}} className='round'></div> <a>In-Progress</a> 
+                    <div style={{backgroundColor:'#AD1FEA'}} className='round'></div> <a href="/">In-Progress</a> 
                     </div>
                     <span>3</span>
                 </div>
                 <div className='roadmap-item'>
                     <div className='item-name'>
-                    <div style={{backgroundColor:'#62BCFA'}} className='round'></div> <a>Live</a> 
+                    <div style={{backgroundColor:'#62BCFA'}} className='round'></div> <a href="/">Live</a> 
                     </div>
                     <span>1</span>
                 </div>
