@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/home/home";
+import Feedback from "../src/pages/feedbackCard/feedbackCard"
+import AddCard from "./components/add-card/add-card"
+import {Route,Routes} from "react-router-dom";
+import "./assets/scss/main.scss"
+import Data from "../src/data/data"
+import RoadmapPage from "./pages/roadmap-page/roadmap-page";
+import { useState } from "react";
+import EditCard from "./pages/edit-card/edit-card";
+import { createContext } from "react";
 
-function App() {
+
+
+
+export const CardContex = createContext()
+const App = () => {
+    const [feedbacks,setFeedbacks] = useState(Data)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <CardContex.Provider value={ { feedbacks, setFeedbacks} }>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/AddCard" element={<AddCard/>} />  
+          <Route path="/feedback/:id" element={<Feedback/>}></Route>
+          <Route path="/RoadmapPage" element={<RoadmapPage/>}></Route>
+          <Route path="/editcard" element={<EditCard/>}></Route>
+        </Routes>
+      </CardContex.Provider>
+
   );
 }
 
